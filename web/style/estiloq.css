@@ -1,0 +1,688 @@
+a:focus,
+button:focus,
+input:focus,
+:focus {
+    outline: none;
+}
+
+
+header{
+    height: 100px;
+}
+
+body{
+    background: url('../media/fondoqualite.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    max-height: 100vh;
+
+}
+
+
+
+/*NAV*/
+.drop{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    transition: opacity 300ms;
+    margin-left: -10%;
+    margin-top: -0.6%;
+}
+
+
+
+.container__header{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.logo img{
+    width: 65px;
+    height: 65px;
+    margin-top: -15%;
+}
+
+.menu nav ul{
+    display: flex;
+}
+
+.menu nav ul li{
+    list-style: none;
+    padding: 0px 20px;
+}
+
+.menu nav ul li a{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    transition: opacity 300ms;
+}
+
+.menu nav ul li a:hover{
+    opacity: 0.6;
+    color: green;
+}
+
+.btn__header-logout{
+    padding: 14px 30px;
+    border: none;
+    background: #000;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background, color, 300ms;
+}
+
+.btn__header-logout:hover{
+    background: #69F1A1;
+    color: #000;
+}
+
+#icon_menu{
+    display: none;
+}
+
+ul li ul.dropdown li{
+    display: block;
+}
+
+ul li ul.dropdown{
+    width: 15%;
+    background: white;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    overflow-y: scroll;
+    height: 40%;
+}
+
+
+
+ul li:hover ul.dropdown{
+    display: block;
+}
+
+
+/*termina NAV*/
+
+
+/*HOME RESPONSIVE INICIA*/
+main{
+    max-width: 1200px;
+    height: calc(100vh + 800px);
+    padding: 40px;
+    margin: auto;
+}
+
+.cover{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.text__information-cover{
+    width: 50%;
+}
+
+.text__information-cover h1{
+    font-size: 50px;
+    justify-content: center;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text__information-cover p{
+    font-size: 23px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.media__cover{
+    margin-top: -8%;
+}
+
+/*HOME RESPONSIVE TERMINA*/
+
+
+.men{
+    display: block;
+}
+
+
+.contenedor{
+    margin-right: -8px;
+}
+
+
+.fotoPerfil{
+    border-radius: 50%;
+}
+
+.foot{
+    position: fixed;
+    bottom: 0;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.logo-foot{
+    width: 65px;
+    position: relative;
+    margin-bottom: 3px;
+    position: sticky;
+    bottom: 0;
+}
+
+.d-block{
+    display: block;
+}
+
+.mx-auto{
+    margin: auto;
+}
+
+.p-user{
+    margin-left: 15px;
+}
+
+.tablas{
+    padding-top: 1%;
+    display: flex;
+}
+
+.icon_bq{
+    display: flex;
+    margin-left: 6%;
+    margin-right: 1%;
+}
+
+.lbFoot{
+    font-weight: lighter;
+}
+.card-detalle{
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    width: 80%;
+    height: 138%;
+    transition: all 300ms;
+    margin-top: 2%;
+    margin: auto;
+}
+
+.card-header{
+    background-color: rgba(49, 191, 223, 0.5);
+}
+
+.equis{
+    color: red;
+    float: right;
+}
+
+.cuerpo{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 300px;
+    background-color: #f4f4f4;
+}
+
+.blocks{
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: black;
+    padding-bottom: 20px;
+    box-shadow: 5px 5px 7px #D6D6D6;
+}
+
+.separadores{
+    color: #41BCDB;
+    font-size: 25px;
+}
+
+.inputs{
+    padding-top: 4px;
+    padding-bottom: 16px;
+}
+
+.inp{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 7px #D6D6D6;
+    text-align: center;
+}
+
+.oculto::-webkit-outer-spin-button,
+.oculto::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.oculto {
+    -moz-appearance: textfield;
+}
+
+.rojo{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 7px #D6D6D6;
+    text-align: center;
+    border-color: red;
+}
+
+.inp-foto{
+    width: 40%;
+    height: 120px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 7px #D6D6D6;
+    border-color: black;
+    background-color: white;
+}
+
+.upload_img{
+    margin-top: 20%;
+}
+
+.label-inp{
+    margin-top: 20px;
+}
+
+.btnguardar{
+    width: 80%;
+    border-radius: 13px;
+    font-size: 20px;
+    padding: 1px;
+}
+
+.btncancelar{
+    width: 80%;
+    border-radius: 13px;
+    font-size: 20px;
+    padding: 1px;
+}
+
+.bar-bq{
+    display: inline-block;
+    border-radius: 15px;
+    border-color: black;
+    border-width: 0.5px;
+    background-color: #f4f4f4;
+    border-style: solid;
+    text-align: center;
+    width: 60%;
+    height: 35px;
+    margin-bottom: 4%;
+}
+
+.bar-bqp{
+    display: inline-block;
+    border-radius: 15px;
+    border-color: black;
+    border-width: 0.5px;
+    background-color: #f4f4f4;
+    border-style: solid;
+    text-align: center;
+    width: 48%;
+    height: 35px;
+    margin-bottom: 4%;
+}
+
+.btn-search{
+    border-radius: 100px;
+    border-color: rgba(0,0,0,0);
+
+    background-color: transparent;
+
+    width: 37px;
+    height: 35px;
+    margin-left: 0.5%;
+}
+
+.agregar{
+    margin-left: 1%;
+    width: 150px;
+    height: 35px;
+    margin-bottom: 1.4%;
+}
+
+.add{
+    margin-right: 8%;
+}
+
+.fondo_table{
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    position: absolute;
+    height: 70%;
+    width: 80%;
+    margin-top: 50px;
+    border-color: black;
+}
+
+.titulo_tabla{
+    font-size: 25px;
+    text-align: left;
+    background-color: rgba(0,0,0,0);
+    font-weight: bold;
+    font-family: sans-serif;
+    padding-bottom: 0px;
+    margin: auto;
+}
+
+.tabla_despliegue{
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px #D6D6D6;
+    background-color: #fff;
+    transition: all 3000ms;
+    text-align: center;
+}
+
+.total{
+    color: black;
+    font-size: 25px;
+    margin-left: 550px;
+}
+
+.tabla-encabezado{
+    position: sticky;
+    top: 0;
+    background-color: #31bfdf;
+    padding: 1em;
+}
+
+.tabla-cuerpo{
+    background-color: #fff;
+}
+
+
+
+.titulo_home{
+    margin-top: 20%;
+    margin-left: 42%;
+    font-size: 39px;
+    font-weight: bold;
+    color: #569C28;
+    text-align: center;
+}
+
+.parrafo_home{
+    margin-left: 40%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.lentes_home{
+    margin-left: 16%;
+    width: 670px;
+    height: 500px;
+}
+
+.titulo_dropmenu{
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 20px;
+    color: #569C28;
+    margin-bottom: 8%;
+    margin-top: 5%;
+}
+
+.titulo_productos{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: -3%;
+    color: black;
+}
+
+.label-user{
+    margin-left: 1.2%;
+    text-align: center;
+}
+
+.outer-wrapper {
+    overflow: hidden;
+    width: 90%;
+    height: 60%;
+    margin: auto;
+}
+
+.table-wrapper {
+    margin-top: 20px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    height: fit-content;
+    max-height: 90%;
+    padding-bottom: 20px;
+    border-radius: 12px;
+    margin: auto;
+}
+
+
+.section_vista{
+    width: 100%;
+    height: 8%;
+    margin-bottom: 1%;
+    border-radius: 12px;
+    text-align: center;
+}
+
+#swal2-content {
+  text-align: left !important;
+}
+
+/*MEDIA INICIAN*/
+
+
+@media (max-width: 1150px){
+
+    .container__header,
+    main{
+        padding: 20px;
+    }
+
+    #icon_menu{
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .header__register{
+        display: none;
+    }
+
+
+    .menu{
+        height: 0px;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        overflow: hidden;
+        z-index: 10;
+        box-shadow: 0px 0px 30px -20px rgba(0,0,0,0.5);
+        transition: all 300ms;
+        overflow-y: scroll;
+        border-radius: 10px;
+    }
+
+    .menu nav ul{
+        padding: 20px 0px;
+        flex-direction: column;
+        background: #fff;
+    }
+
+    .menu nav ul li{
+        padding: 10px 40px;
+    }
+
+    .mostrar_menu{ /*CLASE MANIPULADA POR JS*/
+        height: 235px;
+    }
+
+    .text__information-cover h1{
+        font-size: 40px;
+    }
+
+    .text__information-cover p{
+        font-size: 16px;
+    }
+
+    .logo{
+        margin-left: 0;
+    }
+    /*TABLAS DESPLIEGUES*/
+
+    .icon_bq{
+
+        margin-right: 3%;
+    }
+
+    .edit_icon{
+        width: 25px;
+        height: 25px;
+    }
+
+}
+
+@media (max-width: 780px){
+
+    .agregar{
+        margin-top: 1%;
+    }
+
+    .titulo_tabla{
+        font-size: 20px;
+    }
+
+    .lbFoot{
+        font-size: 2px;
+    }
+
+    .logo{
+        margin-left: -3%;
+    }
+}
+
+@media (max-width: 700px){
+
+    .inp_div{
+        width: 200%;
+        display: inline-block;
+        border-radius: 15px;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    .label-inp{
+        margin-top: 20px;
+    }
+
+    .btnguardar{
+        width: 100%;
+        border-radius: 13px;
+        font-size: 18px;
+        padding: 1px;
+    }
+
+    .btncancelar{
+        width: 100%;
+        border-radius: 13px;
+        font-size: 18px;
+        padding: 1px;
+    }
+
+    .inp{
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: none;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 880px){
+    .text__information-cover{
+        width: 100%;
+    }
+
+    .media__cover{
+        display: none;
+    }
+
+    .text__information-cover p{
+        font-size: 20px;
+    }
+
+    .lbFoot{
+        font-size: 13px;
+    }
+
+    ul li ul.dropdown{
+        width: 130%;
+        background: white;
+        position: absolute;
+        z-index: 999;
+        display: none;
+        overflow-y: hidden;
+        height: fit-content;
+        overflow-x: scroll;
+    }
+
+    .titulo_dropmenu{
+        justify-content: start;
+        font-weight: bold;
+        font-size: 16px;
+        color: #569C28;
+        margin-bottom: 8%;
+        margin-top: 5%;
+    }
+
+    .agregar{
+        margin-left: 3%;
+        margin-top: -0.1%;
+    }
+
+    .ocultarColumna{
+        display: none;
+    }
+
+}
+
+@media (max-width: 570px){
+
+    .agregar{
+        width: 90px;
+    }
+
+}
+
+/*Responsivo Vertical*/
+
+@media (max-height: 600px){
+    .lbFoot{
+        font-size: 10px;
+    }
+}
+
+@media(max-height: 640px){
+
+}
+
+
+
+
+

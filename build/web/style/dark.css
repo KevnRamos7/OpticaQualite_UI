@@ -1,0 +1,160 @@
+
+/* 
+    Created on : 19 nov. 2022, 21:19:40
+    Author     : REDATA TEAM
+*/
+
+body.dark{
+    background-image: url('../media/fondoqualite-dark.png');
+}
+
+body.dark h1{
+    color: white;
+}
+
+body.dark p{
+    color: white;
+}
+
+body.dark a{
+    color: white;
+}
+
+.dark .menu nav ul li a{
+    color: white;
+}
+
+.dark .menu nav ul li a:hover{
+    color: #20c997;
+}
+
+.dark ul li ul.dropdown{
+    background: #433d3d;
+}
+
+.dark .tablas button{
+    color: white;
+}
+
+.dark .tablas .btn-outline-dark{
+    border-color: white;
+}
+
+.dark .fondo_table{
+    background-color: #141414;
+    border-color: gray;
+}
+
+.dark .titulo_tabla{
+    color: white;
+}
+
+.dark .bar-bq{
+    background-color: #404040;
+    border-color: white;
+    color: white;
+}
+
+.dark .bar-bqp{
+    background-color: #404040;
+    border-color: white;
+    color: white;
+}
+
+.dark .tabla_despliegue{
+    background-color:#3B3830; 
+}
+
+.dark .dropdown-menu {
+    background-color: #433d3d;
+}
+
+
+.dark .contenido_tabla{
+    background-color: #404040;
+    color: white;
+}
+
+.dark .tabla-encabezado{
+    background-color: #2d2e2c;
+    color: white;
+}
+
+.dark .fa-bars{
+    color: white;
+}
+
+.dark .encabezado{
+    background-color: #2d2e2c;
+}
+
+.dark .encabezado_det{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dark .label-inp{
+    color: white;
+}
+
+.dark .total{
+    color: white;
+}
+
+.dark .inp{
+    background-color: gray;
+    box-shadow: 5px 5px 7px #242424;
+    border-width: 0.5px;
+    color: white;
+}
+
+.dark .rojo{
+    background-color: gray;
+    box-shadow: 5px 5px 7px #242424;
+    border-width: 0.5px;
+    color: white;
+}
+
+.dark .blocks{
+    box-shadow: 5px 5px 7px #242424;
+}
+
+.dark .cuerpo{
+    background-color: #404040;
+}
+
+.dark .mart{
+    margin-top: 1%;
+}
+
+
+.dark .btn-search{
+    background-color: #404040;
+    border-color: white;
+}
+
+.dark .fa-search{
+    color: white;
+}
+
+.dark .tabla_despliegue{
+    box-shadow: 10px 10px 15px #424242;
+}
+
+.dark .section_vista{
+    background: #404040;
+    color: white;
+}
+
+.dark hr{
+    color: white;
+}
+
+@media (max-width: 1150px){
+    .dark .menu nav ul{
+    background: #433d3d;
+}}
+
+
+

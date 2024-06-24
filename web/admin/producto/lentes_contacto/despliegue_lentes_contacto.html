@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<div class="row">
+    <div id="divDetalle" class="col-12 container-fluid">
+        <div class="card card-detalle ">
+            <div class="card-header text-center encabezado">
+                <label class="encabezado_det">DETALLES LENTES DE CONTACTO</label>
+                <span>
+                    <a class="optica_closable_action" href="#" onclick="cm.setDetalleVisible(false);" >
+                        <span class="equis"><i class="fas fa-times"></i></span>
+                    </a>
+                </span>
+            </div>
+
+
+            <div class="card-body cuerpo">
+                <div class="form">
+                    <div class="text-center inputs">
+                        <div class="blocks">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-4 inp_div"><input id="txtCodigoLenteC" type="text" class="inp mt-2" disabled></div>
+                                    <div class="col-4 inp_div"><input id="txtCodigoProducto" type="text" class="inp mt-2" disabled></div>
+                                    <div class="col-4 inp_div"><input id="txtCodigoBarras" type="text" class="inp mt-2" disabled></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blocks">
+                            <div class="row">
+
+                                <div class="col-4 inp_div">
+                                    <label class="label-inp">Nombre:</label>
+                                    <input id="txtNombre" type="text" class="inp">
+                                </div>
+                                <div class="col-4 inp_div">
+                                    <label class="label-inp">Marca:</label>
+                                    <input id="txtMarca" type="text" class="inp">
+                                </div>
+                                <div class="col-4 inp_div">
+                                    <label class="label-inp">Queratometr&iacute;a:</label>
+                                    <input id="txtQueratometria" type="text" class="inp">
+                                </div>
+                                <div class="col-4 inp_div">
+                                    <label class="label-inp">Precio compra:</label>
+                                    <input id="txtPrecioC" type="text" class="inp">
+                                </div>
+                                <div class="col-4 inp_div">
+                                    <label class="label-inp">Precio venta:</label>
+                                    <input id="txtPrecioV" type="text" class="inp">
+                                </div>
+                                <div class="col-4 inp_div">
+                                    <label class="label-inp">Existencias:</label>
+                                    <input id="txtExistencias" type="text" class="inp">
+                                </div>
+                                
+                                <!-- FOTO -->
+                                    
+                                    
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <img id="imgFoto" src="" style="width: 156px; height: 156px;">
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <button id="btnSeleccionarImagen" class="btn btn-outline-dark">Guardar Foto</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <input id="inputFileImagenArmazon" type="file">
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    <!-- FOTO -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-2">
+                    <div class="container">
+                        <div class="row mt-4 text-center">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-outline-success btnguardar p-2" onclick="cm.save(); alertarGuardarRegistro();"><i class="fas fa-save" ></i>&nbsp;&nbsp;Guardar</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-outline-secondary btncancelar p-2" onclick="cm.setDetalleVisible(false);"><i class="fas fa-trash"></i>&nbsp;Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- COMIENZA DETALLES LENTES DE CONTACTO -->
+<div class="row">
+    <div id="divCatalogo">
+        <div class="col-12 d-flex justify-content-center tablas">
+
+            <input id="barra_busqueda" type="text" class="bar-bq">
+
+            <button id="agregar" class="btn btn-sm btn-outline-dark align-content-end float-start mb-5 agregar" 
+                    onclick="cm.setDetalleVisible(true);">
+                <i class="fas fa-plus"></i>&nbsp;&nbsp;Agregar
+            </button>
+
+            <div class="card fondo_table justify-content-center">
+                <div class="card-header titulo_tabla">
+                    LISTADO DE LENTES DE CONTACTO
+                </div>
+
+                <div class="form-check form-switch switch">
+                    <input type="checkbox" class="form-check-input" onclick="cm.inicializar();" id="switchActivos" value="true">
+                </div>
+
+                <div class="card-body outer-wrapper">
+                    <div class="table-wrapper">
+                        <table id="tblLentesC" class="table table-hover tabla_despliegue">
+                            <thead class="text-center tabla-encabezado">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Marca</th>
+                                    <th>Queratometr&iacute;a</th>
+                                    <th>Precio Compra</th>
+                                    <th>Precio Venta</th>
+                                    <th>Existencias</th>
+                                    <th>Estatus</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbodyLentesC" class="tabla-cuerpo"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/home.js"></script>
+<script src="../js/lentes_contacto.js"></script>
+<script src="../js/main.js"></script>

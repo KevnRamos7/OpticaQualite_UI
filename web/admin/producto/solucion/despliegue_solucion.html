@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<div class="row">
+    <div id="divDetalle" class="col-12 container-fluid">
+        <div class="card card-detalle">
+            <div class="card-header text-center encabezado">
+                <label class="encabezado_det">DETALLES SOLUCI&Oacute;N</label>
+                <span>
+                    <a class="optica_closable_action" href="#" onclick="cm.setDetalleVisible(false);" >
+                        <span class="equis"><i class="fas fa-times"></i></span>
+                    </a>
+                </span>
+            </div>
+
+
+            <div class="card-body cuerpo">
+                <div class="form">
+                    <div class="text-center inputs">
+
+                        <!-- Inician ID's -->
+
+                        <div class="blocks">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-4 inp_div"><input id="txtIdProducto" type="text" class="inp mt-2" disabled></div>
+                                    <div class="col-4 inp_div"><input id="txtIdSolucion" type="text" class="inp mt-2" disabled></div>
+                                    <div class="col-4 inp_div"><input id="txtNumeroUnico" type="text" class="inp mt-2" disabled></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Terminan ID's -->
+                        <!-- Input Datos Solucion -->
+
+                        <div class="blocks">
+                            <div><label class="separadores mt-3 encabezado_det">Datos Soluci&oacute;n</label></div>
+
+                            <div class="container">
+                                <div class="row">
+
+                                    <div class="col-6 inp_div">
+                                        <label class="label-inp">Nombre:</label>
+                                        <input id="txtNombre" type="text" class="inp">
+                                    </div>
+
+                                    <div class="col-6 inp_div">
+                                        <label class="label-inp">Marca:</label>
+                                        <input id="txtMarca" type="text" class="inp">
+                                    </div>
+
+                                    <div class="col-4 inp_div">
+                                        <label class="label-inp">Precio Compra:</label>
+                                        <input id="txtPrecioC" type="text" class="inp">
+                                    </div>
+
+                                    <div class="col-4 inp_div">
+                                        <label class="label-inp">Precio Venta:</label>
+                                        <input id="txtPrecioV" type="text" class="inp">
+                                    </div>
+
+                                    <div class="col-4 inp_div">
+                                        <label class="label-inp">Existencias:</label>
+                                        <input id="txtExistencias" type="text" class="inp">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="my-2 text-center">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button class="btn btn-outline-success btnguardar" onclick="cm.save(); alertarGuardarRegistro();"><i class="fas fa-save" ></i>&nbsp;&nbsp;Guardar</button>
+                                </div>
+
+                                <div class="col-6">
+                                    <button class="btn btn-outline-secondary btncancelar" onclick="cm.setDetalleVisible(false);"><i class="fas fa-trash"></i>&nbsp;Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- COMIENZA DETALLES SOLUCIONES -->
+
+    <div id="divCatalogo">
+        <div class="col-12 d-flex justify-content-center tablas">
+
+            <input id="barra_busqueda" type="text" class="bar-bq">
+
+            <button id="agregar" class="btn btn-sm btn-outline-dark align-content-end float-start mb-5 agregar" 
+                    onclick="cm.setDetalleVisible(true);">
+                <i class="fas fa-plus"></i>&nbsp;&nbsp;Agregar
+            </button>
+
+            <!-- Tabla Despliegue -->
+
+            <div class="card fondo_table">
+                <div class="card-header titulo_tabla">
+                    Listado de Soluciones
+
+                </div>
+
+
+
+
+                <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" onclick="cm.inicializar();" id="switchActivos" value="true">
+                </div>
+                <div class="card-body outer-wrapper1">
+                    <div class="table-wrapper">
+                        <table id="tblAccesorios" class="table table-hover tabla_despliegue">
+                            <thead class="text-center tabla-encabezado">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Marca</th>
+                                    <th>Precio Compra</th>
+                                    <th>Precio Venta</th>
+                                    <th>Existencias</th>
+                                    <th>Estatus</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbodyClientes" class="tabla-cuerpo"></tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../js/solucion.js"></script>
+<script src="../js/main.js"></script>

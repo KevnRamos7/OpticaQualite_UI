@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../js/gft/gft.css"/>
+<div class="row">
+    <div id="divTicket" class="col-12 container-fluid">
+        <div class="col-12 d-flex justify-content-center tablas">
+
+            <!-- PARTE SUPERIOR TABLA DESPLIEGUE -->
+
+
+            <input id="barra_busqueda" type="text" class="bar-bq">
+
+            <button id="agregar" class="btn btn-sm btn-outline-dark align-content-end float-start mb-5 agregar" 
+                    onclick="cm.setDetalleVisible(0);">
+                <i class="fas fa-arrow-left"></i>&nbsp;&nbsp;Volver
+            </button>
+
+
+
+            <!-- TABLA DE DESPLIEGUE -->
+            <div class="card fondo_table justify-content-center">
+                <div class="card-header titulo_tabla">
+                    PRODUCTOS AGREGADOS
+                    <label id="lbTotal" class="total">$0</label>
+                </div>
+
+                <div class="card-body outer-wrapper">
+                    
+                    <div class="table-wrapper">
+
+                        
+                        <table id="tblAccesorios" class="table table-hover tabla_despliegue">
+                            <thead class="text-center tabla-encabezado">
+                                <tr>
+                                    <th>Codigo de Barras</th>
+                                    <th>Nombre</th>
+                                    <th>Marca</th>
+                                    <th>Precio Venta</th>
+                                    <th>Cantidad</th>
+                                    <th>Descuento</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="tbodyCarrito" class="tabla-cuerpo"></tbody>
+                        </table>
+
+                    </div>
+                    <button id="comprar" class="btn btn-sm btn-outline-dark align-content-end float-start mb-5 agregar " 
+                            onclick="cm.enviarCarrito();">
+                        <i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Comprar
+                    </button>
+                    
+                </div>
+           
+            </div>    
+        </div>
+    </div>
+</div>
+
+<!-- DESPLIEGUE -->
+<div class="row">
+    <div id="divCatalogo">
+        <div class="col-12 d-flex justify-content-center tablas">
+
+            <!-- PARTE SUPERIOR TABLA DESPLIEGUE -->
+
+
+            <input id="buscar_venta" type="text" class="bar-bqp">
+
+            <button id="agregar" class="btn btn-sm btn-outline-dark align-content-end float-start mb-5 agregar" 
+                    onclick="cm.setDetalleVisible(1); cm.totales()">
+                <i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;Ver Ticket
+            </button>
+            
+            <button id="agregar" class="btn btn-sm btn-outline-dark align-content-end float-start mb-5 agregar" 
+                    onclick="cm.setDetalleVisible(2);">
+                <i class="fas fa-glasses"></i>&nbsp;&nbsp;Venta Lentes
+            </button>
+            
+            <button id="agregar" class="btn btn-sm btn-outline-dark align-content-end float-start mb-5 agregar" 
+                    onclick="cm.setDetalleVisible(4);">
+                <i class="fas fa-eye"></i>&nbsp;&nbsp;Lentes Contacto
+            </button>
+            
+            <!-- TABLA DE DESPLIEGUE -->
+            <div class="card fondo_table justify-content-center">
+                <div class="card-header titulo_tabla">
+                    LISTADO DE PRODUCTOS
+
+                </div>
+
+                <div class="card-body outer-wrapper">
+                    <div class="table-wrapper">
+
+
+                        <table id="tblVenta" class="table table-hover tabla_despliegue">
+                            <thead class="text-center tabla-encabezado">
+                                <tr>
+                                    <th>Codigo de Barras</th>
+                                    <th>Nombre</th>
+                                    <th>Marca</th>
+                                    <th>Precio Venta</th>
+                                    <th>Existencias</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbodyVenta" class="tabla-cuerpo"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
+
+
+
+<!-- AQUI VA LO DE PRESUPUESTO LENTES -->
+
+
+<!-- DESPLIEGUE -->
+<div class="row">
+    <div id="divCliente">
+        <div class="col-12 d-flex justify-content-center tablas">
+
+            <!-- PARTE SUPERIOR TABLA DESPLIEGUE -->
+
+
+            <input id="buscar_cliente" type="text" class="bar-bqp">
+            <button id="agregar" class="btn btn-sm btn-outline-dark align-content-end float-start mb-5 agregar" 
+                    onclick="cm.setDetalleVisible(0); cm.generar(); cm.crearTicket();">
+                <i class="fas fa-glasses"></i>&nbsp;&nbsp;Generar
+            </button>
+            
+            <button id="agregar" class="btn btn-sm btn-outline-dark align-content-end float-start mb-5 agregar" 
+                    onclick="cm.setDetalleVisible(0);">
+                <i class="fas fa-arrow-left"></i>&nbsp;&nbsp;Volver
+            </button>
+
+            <!-- TABLA DE DESPLIEGUE -->
+            <div class="card fondo_table justify-content-center">
+                <div class="card-header titulo_tabla">
+                    CREA PRESUPUESTO
+
+                </div>
+
+                <div class="card-body outer-wrapper">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="table-wrapper">
+                                <table id="tblClientes" class="table table-hover tabla_despliegue">
+                                    <thead class="text-center tabla-encabezado">
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Primer Apellido</th>
+                                            <th>Segundo Apellido</th>
+                                            <th>Genero</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbodyClientes" class="tabla-cuerpo"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <select id="secExamen" class="section_vista">
+
+                            </select>
+                            <div class="table-wrapper">
+                                <table id="tblGraduacion" class="table table-hover tabla_despliegue">
+                                    <thead class="text-center tabla-encabezado">
+                                        <tr>
+                                            <th>EsferaOD</th>
+                                            <th>EsferaOI</th>
+                                            <th>CilindroOD</th>
+                                            <th>CilindroOI</th>
+                                            <th>EjeOD</th>
+                                            <th>EjeOI</th>
+                                            <th>DIP</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbodyGraduacion" class="tabla-cuerpo"></tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 align-items-center">
+                                    <select id="secArmazon" class="section_vista mt-3 h-auto"></select>
+                                    <select id="secMica" class="section_vista mt-3 h-auto"></select>
+                                    <select id="secMaterial" class="section_vista mt-3 h-auto"></select> 
+                                    <input id="txtAlturaOblea" placeholder="Ingresa una altura de oblea" type="text" class="inp mt-3"/>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="table-wrapper">
+                                        <table id="tblTratamiento" class="table table-hover tabla_despliegue">
+                                            <thead class="text-center tabla-encabezado">
+                                              
+                                                <tr>
+                                                    <th>Nombre</th>
+                                                    <th>Precio</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbodyTratamiento" class="tabla-cuerpo"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>    
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div id="divContacto">
+        <div class="col-12 d-flex justify-content-center tablas">
+
+            <!-- PARTE SUPERIOR TABLA DESPLIEGUE -->
+
+
+            <input id="buscar_clienteC" type="text" class="bar-bqp">
+            <button id="agregar" class="btn btn-sm btn-outline-dark align-content-end float-start mb-5 agregar" 
+                    onclick="cm.setDetalleVisible(0);cm.comprarLenteC();">
+                <i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Comprar
+            </button>
+            
+            <button id="agregar" class="btn btn-sm btn-outline-dark align-content-end float-start mb-5 agregar" 
+                    onclick="cm.setDetalleVisible(0);">
+                <i class="fas fa-arrow-left"></i>&nbsp;&nbsp;Volver
+            </button>
+
+            <!-- TABLA DE DESPLIEGUE -->
+            <div class="card fondo_table justify-content-center">
+                <div class="card-header titulo_tabla">
+                    COMPRA LENTES DE CONTACTO
+
+                </div>
+
+                <div class="card-body outer-wrapper">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="table-wrapper">
+                                <table id="tblClientesC" class="table table-hover tabla_despliegue">
+                                    <thead class="text-center tabla-encabezado">
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Primer Apellido</th>
+                                            <th>Segundo Apellido</th>
+                                            <th>Genero</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbodyClientesC" class="tabla-cuerpo"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <select id="secExamenC" class="section_vista">
+
+                            </select>
+                            <div class="table-wrapper">
+                                <table id="tblGraduacion" class="table table-hover tabla_despliegue">
+                                    <thead class="text-center tabla-encabezado">
+                                        <tr>
+                                            <th>EsferaOD</th>
+                                            <th>EsferaOI</th>
+                                            <th>CilindroOD</th>
+                                            <th>CilindroOI</th>
+                                            <th>EjeOD</th>
+                                            <th>EjeOI</th>
+                                            <th>DIP</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbodyGraduacionC" class="tabla-cuerpo"></tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 align-items-center">
+                                    <select id="secLentesContacto" class="section_vista mt-3 h-auto"></select>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 align-items-center">
+                                    <input id="txtCantidadC" placeholder="Ingresa Cantidad" type="text" class="inp mt-3"/>
+                                </div>
+                                <div class="col-md-6 align-items-center">
+                                    <input id="txtDescuentoC" placeholder="Ingresa Descuento" type="text" class="inp mt-3" onblur="cm.totalLentesC();"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="total me-md-2 mt-5" id="lbPrecioLentesC">Precio Unitario: $</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="total me-md-2 mt-5" id="lbTotalLentesC">Precio Total: $</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>    
+        </div>
+    </div>
+</div>
+<script src="../js/home.js"></script>
+<script src="../js/venta.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/gft/gft.js"></script>

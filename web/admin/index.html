@@ -1,0 +1,180 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>QUALITE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../style/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../style/bootstrap-5.1.3-dist/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" type="text/css" href="../style/bootstrap-5.1.3-dist/css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" type="text/css" href="../style/bootstrap-5.1.3-dist/css/bootstrap-utilities.css">
+        <link rel="stylesheet" href="../style/bootstrap-5.1.3-dist/css/bootstrap.css" type="text/css"/>
+        <link rel="stylesheet" href="../style/bootstrap-5.1.3-dist/css/bootstrap.rtl.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../style/font_awesome_5_15_3/css/fontawesome.min.css">
+
+
+        <link rel="stylesheet" href="../js/gft/gft.css"/>
+        <link rel="stylesheet" href="../style/estiloq.css" type="text/css">
+        <link rel="stylesheet" href="../style/dark.css" type="text/css">
+
+
+
+
+    </head>
+    <body>
+
+
+        <header>
+
+
+
+            <div class="container__header">
+
+                <div class="dropdown logo">
+                    <a id="dropdownMenuProductos" class="navbar-brand dropdown-toggle" href="#" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <img  id="imagen_perfil" src="" alt="" class="fotoPerfil"/>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuProductos">
+                        <li><a class="dropdown-item" onclick="logout();" id="darki">Cerrar mi sesi&oacute;n</a></li>
+                        <li><a id="darkmode" href="javascript:void(0)" class="dropdown-item" onclick="location.reload();">Dark Mode</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="#" onclick="cargarModuloEmpleado();">EMPLEADOS</a></li>
+                            <li><a href="#" onclick="cargarModuloCliente();">CLIENTES</a></li>
+                            <li><a href="#">COMPRAS</a></li>
+                            <li><a href="#" onclick="cargarModuloVentas();">VENTAS</a></li>
+                            <li><a href="#">EXAMEN VISTA</a></li>
+                            <li><a href="#">PRESUPUESTO</a></li>
+                            <li>
+                                <a href="#">PRODUCTOS</a>
+                                <ul class="dropdown">
+                                    <li class="titulo_dropmenu">CATALOGO</li>
+                                    <li><a style="margin-bottom: 3%; font-size: 17px;" href="#" onclick="cargarModuloAccesorio();">ACCESORIOS</a></li>
+                                    <hr>
+                                    <li><a style="margin-bottom: 3%; font-size: 17px;"  href="#" onclick="cargarModuloArmazones();">ARMAZONES</a></li>
+                                    <hr>
+                                    <li><a style="margin-bottom: 3%; font-size: 17px;"  href="#" onclick="cargarModuloLentesDeContacto();">LENTES DE CONTACTO</a></li>
+                                    <hr>
+                                    <li><a style="margin-bottom: 3%; font-size: 17px;"  href="#" onclick="cargarModuloSolucion();">SOLUCIONES</a></li>
+                                    <li class="titulo_dropmenu">COMPLEMENTOS</li>
+                                    <li><a style="margin-bottom: 3%; font-size: 17px;" href="#" onclick="cargarModuloMaterial();">MATERIALES</a></li>
+                                    <hr>
+                                    <li><a style="margin-bottom: 3%; font-size: 17px;"  href="#" onclick="cargarModuloTratamientos();">TRATAMIENTOS</a></li>
+                                    <hr>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+
+
+
+
+                <i class="fa solid fa-bars bars" id="icon_menu" onclick="mostrar_menu();"></i>
+
+            </div>
+
+
+        </header>
+
+
+        <div class="row">
+            <div class="col-12">
+                <div id="contenedor_home" class="container-fluid">
+
+                </div>  
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div id="contenedor_principal" class="container-fluid">
+
+                </div> 
+            </div>
+        </div>
+
+    </body>
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row align-items-end foot">
+                <div class="col-4">
+
+                    <p class="lbFoot">2022 Qualite M&eacute;xico - Todos los derechos reservados</p>
+
+                </div>
+                <div class="col-4 mb-3">
+                    <div>
+                        <a onclick="cerrarModulos();"><img src="../media/logo.png" alt="alt" class="logo-foot d-block mx-auto close"/></a>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <a href="#"><img id="ayuda" src="../media/ayuda_icon.png" width="70" alt="alt" style="float: right;" class="mb-4"/></a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script type="text/javascript" src="../style/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../style/font_awesome_5_15_3/js/all.min.js" type="text/javascript"></script>
+    <script src="../style/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="../jquery/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="../js/gft/gft.js"></script>
+
+
+    <script src="./js/main.js"></script>
+    <script src="../js/alert.js"></script>
+    <script src="../js/log.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/home.js"></script>
+
+
+    <script type="text/javascript">
+                                window.onload = function cargarHome() {
+                                    fetch("home.html")
+                                            .then(response => {
+                                                return response.text();
+                                            })
+                                            .then(function (html)
+                                            {
+
+                                                document.getElementById('contenedor_principal').innerHTML = "";
+                                                document.getElementById('contenedor_home').innerHTML = html;
+                                            });
+                                }
+    </script>
+
+    <script type="text/javascript">
+        function mostrar_menu() {
+
+            document.querySelector(".menu").classList.toggle("mostrar_menu");
+        }
+    </script>
+
+    <script>
+        let dat = localStorage.getItem("empleadouno");
+
+    // Convertir la cadena en un objeto JSON
+        let json = JSON.parse(dat);
+
+    // Acceder al lastToken
+        let foto = json.usuario.fotografia;
+        
+        document.getElementById("imagen_perfil").src = "data: image/png;base64," + foto;
+
+    </script>    
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<div class="row">
+    <div id="divDetalle" class="col-12 container-fluid">
+        <div class="card card-detalle">
+            <div class="card-header text-center encabezado">
+                <label class="encabezado_det">DETALLES EMPLEADO</label>
+                <span>
+                    <a class="optica_closable_action" href="#" onclick="cm.setDetalleVisible(false);" >
+                        <span class="equis"><i class="fas fa-times"></i></span>
+                    </a>
+                </span>
+            </div>
+
+
+            <div class="card-body cuerpo">
+                <div class="form">
+                    <div class="text-center inputs">
+                        <!-- Inician ID's -->
+
+                        <div class="blocks">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-4 inp_div"><input id="txtCodigoEmpleado" type="text" class="inp mt-2" disabled></div>
+                                    <div class="col-4 inp_div"><input id="txtCodigoPersona" type="text" class="inp mt-2" disabled></div>
+                                    <div class="col-4 inp_div"><input id="txtCodigoUsuario" type="text" class="inp mt-2" disabled></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Terminan ID's -->
+                        <!-- Input Datos Personales -->
+
+
+                        <div class="blocks">
+                            <div><label class="separadores mt-3 encabezado_det">Datos Personales</label></div>
+
+                            <div class="container">
+                                <div class="row">
+
+                                    <div class="col-4 inp_div">
+                                        <label class="label-inp">Nombre:</label>
+                                        <input id="txtNombre" type="text" class="inp">
+                                    </div>
+
+                                    <div class="col-4 inp_div">
+                                        <label class="label-inp">Primer apellido</label>
+                                        <input id="txtApellidoPaterno" type="text" class="inp">
+                                    </div>
+
+                                    <div class="col-4 inp_div">
+                                        <label class="label-inp">Segundo apellido</label>
+                                        <input id="txtApellidoMaterno" type="text" class="inp"><br>
+                                    </div>
+
+                                    <div class="col-6 inp_div">
+                                        <label class="mt-4 label-inp">G&eacute;nero:</label> 
+                                        <select id="cmbGenero" class="inp text-center">
+                                            <option value="M">Masculino</option>
+                                            <option value="F">Femenino</option>
+                                            <option value="O">Otro</option>
+                                        </select> 
+                                    </div>
+
+                                    <div class="col-6 inp_div">
+                                        <label class="mt-4 label-inp">Fecha de Nacimiento</label>
+                                        <input id="dpFechaNacimiento" type="date" class="inp text-center mb-3"/>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Terminan Datos Personales -->
+
+                    <!-- Datos Contacto -->
+                    <div class="blocks text-center">
+                        <div><label class="separadores mt-3 encabezado_det">Datos de Contacto</label></div>
+
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-3 inp_div">
+                                    <label class="label-inp">Calle:</label>
+                                    <input id="txtCalle" type="text" class="inp">
+                                </div>
+
+                                <div class="col-3 inp_div">
+                                    <label class="label-inp">Número:</label>
+                                    <input id="txtNumero" type="text" class="inp">
+                                </div>
+
+                                <div class="col-3 inp_div">
+                                    <label class="label-inp">Colonia:</label>
+                                    <input id="txtColonia" type="text" class="inp">
+                                </div>
+
+                                <div class="col-3 inp_div">
+                                    <label class="label-inp">Código Postal:</label>
+                                    <input id="txtCp" type="text" class="inp">
+                                </div>
+                                <!-- Termina Primera Linea de Datos de Contacto -->
+                                <div class="col-3 inp_div">
+                                    <label class="label-inp">Ciudad:</label>
+                                    <input id="txtCiudad" type="text" class="inp">
+                                </div>
+
+                                <div class="col-3 inp_div">
+                                    <label class="label-inp">Estado:</label>
+                                    <input id="txtEstado" type="text" class="inp">
+                                </div>
+
+                                <div class="col-3 inp_div">
+                                    <label class="label-inp">Telefono de casa:</label>
+                                    <input id="txtTelCasa" type="text" class="inp">
+                                </div>
+
+                                <div class="col-3 inp_div">
+                                    <label class="label-inp">Telefono movil:</label>
+                                    <input id="txtTelMovil" type="text" class="inp">
+                                </div>
+                                <!-- Termina Segunda Linea de Datos de Contacto -->
+                                <div class="col-4 inp_div">
+                                    <label class="label-inp">Correo electr&oacute;nico:</label>
+                                    <input id="txtEmail" type="text" class="inp mb-3">
+                                </div>
+
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div class="blocks text-center">
+                        <div><label class="separadores mt-3 encabezado_det">Datos de Usuario</label></div>
+
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-4 inp_div">
+                                    <label class="label-inp">Usuario:</label>
+                                    <input id="txtUser" type="text" class="inp">
+                                </div>
+
+                                <div class="col-4 inp_div">
+                                    <label class="label-inp">Contrase&ntilde;a:</label>
+                                    <input id="txtContrasenia" type="text" class="inp">
+                                </div>
+
+
+                                <div class="col-4 inp_div">
+                                    <label class="label-inp">Rol:</label>
+                                    <input id="txtRol" type="text" class="inp">
+                                </div>
+                                
+                                <div class="row mt-2">
+                                        <div class="col-12">
+                                            <img id="imgFotoP" src="" style="width: 156px; height: 156px;">
+                                        </div>
+                                        
+                                    </div>
+                                   
+                                    
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <input id="inputFileFotoPerfil" type="file">
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <!-- <label class="label-inp">Puesto:</label><br>
+                        <select id="cmbRol" class="inp text-center" style="background-color: white;">
+                            <option value="Vendedor">Vendedor</option>
+                            <option value="Oftalmólogo">Oftalm&oacute;logo</option>
+                            <option value="Limpieza">Limpieza</option>
+                            <option value="Otro">Otro</option>
+                        </select>  <br>
+                        <label class="label-inp">N&uacute;mero &Uacute;nico:</label><br>
+                        <input id="txtNumeroUnic" type="text" class="inp mb-3"> -->
+                    </div>
+
+                </div>
+                <div class="my-2 text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 mart">
+                                <button class="btn btn-outline-success btnguardar" onclick="cm.save(); alertarGuardarRegistro();"><i class="fas fa-save" ></i>&nbsp;&nbsp;Guardar</button>
+                            </div>
+
+                            <div class="col-6 mart">
+                                <button class="btn btn-outline-secondary btncancelar" onclick="cm.setDetalleVisible(false);"><i class="fas fa-trash"></i>&nbsp;Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- DETALLES -->
+
+<!-- COMIENZA DETALLES ACCESORIO -->
+<div class="row">
+    <div id="divCatalogo">
+        <div class="col-12 d-flex justify-content-center tablas">
+
+            <!-- PARTE SUPERIOR TABLA DESPLIEGUE -->
+           
+
+            <input id="barra_busqueda" type="text" class="bar-bq">
+
+            <button id="agregar" class="btn btn-sm btn-outline-dark align-content-end float-start mb-5 agregar" 
+                    onclick="cm.setDetalleVisible(true);">
+                <i class="fas fa-plus"></i>&nbsp;&nbsp;Agregar
+            </button>
+                        
+
+            <!-- TABLA DE DESPLIEGUE -->
+            <div class="card fondo_table justify-content-center">
+                <div class="card-header titulo_tabla">
+                    LISTADO DE EMPLEADOS
+
+                </div>
+
+                <div class="card-body outer-wrapper">
+                    <div class="table-wrapper">
+
+
+                        <table id="tblAccesorios" class="table table-hover tabla_despliegue">
+                            <thead class="text-center tabla-encabezado">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Primer Apellido</th>
+                                    <th class="ocultarColumna">Segundo Apellido</th>
+                                    <th class="ocultarColumna">Genero</th>
+                                    <th class="ocultarColumna">Telefono de casa</th>
+                                    <th class="ocultarColumna">Telefono movil</th>
+                                    <th class="ocultarColumna">Correo</th>
+                                    <th>Estatus</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbodyClientes" class="tabla-cuerpo"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
+
+<script src="../js/home.js"></script>
+<script src="../js/empleado.js"></script>
+<script src="../js/main.js"></script>

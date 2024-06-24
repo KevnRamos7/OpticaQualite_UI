@@ -1,0 +1,32 @@
+
+
+.dark-log body{
+    background: url(../media/fondoqualite-dark.png);
+}
+
+.dark-log .box{
+    box-shadow: 5px 15px 15px #424242;
+}
+
+.dark-log .login{
+    background-color: #838383;
+}
+
+.dark-log .login label{
+    color: black;
+}
+
+.dark-log button{
+    background: white;
+    color: #000;
+    border-color: gray;
+}
+
+.dark-log input{
+    background: #383838;
+    border-color: black;
+}
+
+.dark-log input::placeholder{
+    color: white;
+}
